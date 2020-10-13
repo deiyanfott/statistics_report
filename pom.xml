@@ -17,7 +17,7 @@
     <opencsv.version>5.0</opencsv.version>
     <eclipse.collection.version>10.0.0</eclipse.collection.version>
     <lombok.version>1.18.10</lombok.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
   </properties>
 
