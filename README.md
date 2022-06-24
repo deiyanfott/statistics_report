@@ -7,10 +7,9 @@ After downloading jar file,
 run java -jar /path/to/jar/lombok.jar and follow instructions on how to install.
 
 Application can be run via IDE or command line.
-For IDE, run as java application and supply /path/to/csv/yourcsv.csv as argument.
-
-For command line, create a maven build run configuration with clean install.
-Then run java -jar ${project.build.directory}/statistics-1.0.0.jar /path/to/csv/yourcsv.csv in the CLI.
+1. For IDE, run 'ReportGenerator.java' as a java application and supply /path/to/csv/yourcsv.csv as argument.
+2. For command line, create a maven build run configuration with clean install or run 'mvn clean install' in the 
+   terminal.<br>Then run java -jar ${project.build.directory}/statistics-1.0.0.jar /path/to/csv/yourcsv.csv in the CLI.
 
 About the application:
 1. This standalone application takes three inputs from the terminal, start date, end date, and merchant.
