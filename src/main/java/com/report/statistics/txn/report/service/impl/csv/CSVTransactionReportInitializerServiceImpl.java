@@ -5,9 +5,9 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -29,7 +29,7 @@ public class CSVTransactionReportInitializerServiceImpl implements TransactionRe
 			Set<String> relatedTransactionIds = new HashSet<>();
 			
 			if (csvReportList.hasNext()) {
-				reportList = new LinkedList<>();
+				reportList = new ArrayList<>();
 				
 				while (csvReportList.hasNext()) {
 	    			CSVTransactionReport csvTransactionReport = csvReportList.next();
@@ -54,6 +54,6 @@ public class CSVTransactionReportInitializerServiceImpl implements TransactionRe
 			System.exit(1);
 		}
 		
-		return new LinkedList<>();
+		return new ArrayList<>();
 	}
 }
