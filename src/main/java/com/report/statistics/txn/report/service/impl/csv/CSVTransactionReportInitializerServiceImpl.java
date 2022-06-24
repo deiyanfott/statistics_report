@@ -48,8 +48,10 @@ public class CSVTransactionReportInitializerServiceImpl implements TransactionRe
 			}
 		} catch (NoSuchFileException e) {
 			System.err.println("Missing file in specified location.");
+			System.exit(1);
 		} catch (IOException e) {
 			e.printStackTrace();
+			System.exit(1);
 		}
 		
 		return new LinkedList<>();

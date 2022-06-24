@@ -7,15 +7,16 @@ import com.report.statistics.txn.report.service.TransactionReportInitializerServ
 import com.report.statistics.txn.report.service.TransactionReportStatisticsService;
 import com.report.statistics.txn.report.service.impl.csv.CSVTransactionReportInitializerServiceImpl;
 import com.report.statistics.txn.report.service.impl.csv.CSVTransactionReportStatisticsServiceImpl;
-import com.report.statistics.utils.validator.CSVTransactionReportValidator;
 
 public class ReportGenerator {
     public static void main(String[] args) {
-    	if (CSVTransactionReportValidator.isValidFilePath(args[0])) {
+    	try {
     		TransactionReportInitializerService txnReportSvc = new CSVTransactionReportInitializerServiceImpl();
     		List<TransactionReport> csvReportList = txnReportSvc.initializeData(args[0]);
     		TransactionReportStatisticsService txnStatSvc = new CSVTransactionReportStatisticsServiceImpl();
     		txnStatSvc.showStatisticalData(csvReportList);
-    	}
+    	} catch (ArrayIndexOutOfBoundsException e) {
+			System.err.println("Please provide CSV path as argument.");
+		}
     }
 }
