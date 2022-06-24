@@ -10,7 +10,11 @@ Application can be run via IDE or command line.
 For IDE, run as java application and supply /path/to/csv/yourcsv.csv as argument.
 
 For command line, create a maven build run configuration with clean install.
-Then run java -jar ${project.build.directory}/hoolah-1.0.0.jar /path/to/csv/yourcsv.csv in the CLI.
+Then run java -jar ${project.build.directory}/statistics-1.0.0.jar /path/to/csv/yourcsv.csv in the CLI.
+
+Assumptions:
+1. CSV file contains valid and correct values.
+2. Records found in CSV are already ordered by date.
 
 Notes:
 1. I did not use any autowiring mechanism as importing Spring dependencies
